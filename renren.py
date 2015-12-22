@@ -22,7 +22,7 @@ opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 urllib2.install_opener(opener)
 
 try:
-        resp = urllib2.urlopen(log_url,urllib.urlencode(form_data))
+        r = urllib2.urlopen(log_url,urllib.urlencode(form_data))
         print r.read()
 except urllib2.URLError,e:
         if hasattr(e,'reason'):
